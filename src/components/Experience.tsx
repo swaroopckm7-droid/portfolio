@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, CheckCircle2, TrendingUp, Sparkles } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, TrendingUp } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Experience: React.FC = () => {

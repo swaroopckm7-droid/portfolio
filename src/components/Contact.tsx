@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Copy, Check, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const GithubIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
