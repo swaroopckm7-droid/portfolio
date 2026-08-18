@@ -103,7 +103,7 @@ export const portfolioData = {
     stats: [
       { label: "ML Model Accuracy", value: "85%+", icon: "Target", description: "Achieved on test classification datasets" },
       { label: "Insight Automation", value: "40%", icon: "Zap", description: "Reduced manual reporting time using GenAI" },
-      { label: "Certifications", value: "7+", icon: "Award", description: "Oracle, NPTEL, CodeTantra & Industry badges" },
+      { label: "Certifications", value: "6+", icon: "Award", description: "Oracle, NPTEL & Industry badges" },
       { label: "Internships", value: "2", icon: "Briefcase", description: "Data Analytics & Python Engineering" },
     ]
   } as PersonalInfo,
@@ -242,6 +242,15 @@ export const portfolioData = {
       imageUrl: "/certificates/oracle_apex.png"
     },
     {
+      id: "cert-oracle-agentic",
+      title: "Agentic AI Certified Foundations Associate",
+      issuer: "Oracle",
+      year: "2026",
+      badgeColor: "from-cyan-500 to-blue-600",
+      category: "AI & Autonomous Systems",
+      imageUrl: "/certificates/oracle_agentic_ai.png"
+    },
+    {
       id: "cert-nptel-iiot",
       title: "Industry 4.0 and IIoT (Elite)",
       issuer: "NPTEL / IIT Kharagpur",
@@ -260,22 +269,6 @@ export const portfolioData = {
       imageUrl: "/certificates/nptel_soft_skills.png"
     },
     {
-      id: "cert-oracle-agentic",
-      title: "Agentic AI Certified Foundations Associate",
-      issuer: "Oracle",
-      year: "2026",
-      badgeColor: "from-cyan-500 to-blue-600",
-      category: "AI & Autonomous Systems"
-    },
-    {
-      id: "cert-codetantra-cpp",
-      title: "Data Structures using C++",
-      issuer: "CodeTantra",
-      year: "2025",
-      badgeColor: "from-blue-600 to-cyan-500",
-      category: "Algorithms & CS Fundamentals"
-    },
-    {
       id: "cert-apollo-msa",
       title: "Master in Software Application",
       issuer: "Apollo Computer Education",
@@ -288,7 +281,7 @@ export const portfolioData = {
   achievements: [
     "Completed multiple professional certifications in AI, Cloud, and Programming from Oracle and NPTEL.",
     "Active learner and contributor in AI/ML and software development communities.",
-    "Participated in coding practice and problem-solving on platforms including Skillrack and CodeTantra.",
+    "Participated in coding practice and problem-solving on platforms including Skillrack.",
     "Demonstrated continuous learning through self-paced courses in Generative AI, Agentic AI, and Industry 4.0."
   ]
 };

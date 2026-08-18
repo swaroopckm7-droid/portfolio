@@ -171,7 +171,7 @@ export const downloadOfficialResumePDF = () => {
         <ul class="resume-list" style="margin-bottom: 6px;">
           <li>Completed multiple professional certifications in AI, Cloud, and Programming from Oracle and NPTEL.</li>
           <li>Active learner and contributor in AI/ML and software development communities.</li>
-          <li>Participated in coding practice and problem-solving on platforms including Skillrack and CodeTantra.</li>
+          <li>Participated in coding practice and problem-solving on platforms including Skillrack.</li>
           <li>Demonstrated continuous learning through self-paced courses in Generative AI, Agentic AI, and Industry 4.0.</li>
         </ul>
 
@@ -180,7 +180,7 @@ export const downloadOfficialResumePDF = () => {
           <li><strong>Oracle Generative AI Professional</strong> — Oracle &nbsp;&nbsp;—&nbsp;&nbsp; <strong>Oracle APEX Cloud Developer</strong> — Oracle</li>
           <li><strong>Agentic AI Certified Foundations Associate</strong> — Oracle</li>
           <li><strong>Industry 4.0 and IIoT</strong> — NPTEL &nbsp;&nbsp;—&nbsp;&nbsp; <strong>Soft Skill Development</strong> — NPTEL</li>
-          <li><strong>Data Structures using C++</strong> — CodeTantra &nbsp;&nbsp;—&nbsp;&nbsp; <strong>Master in Software Application</strong> — Apollo Computer Education</li>
+          <li><strong>Master in Software Application</strong> — Apollo Computer Education</li>
         </ul>
 
         <script>
