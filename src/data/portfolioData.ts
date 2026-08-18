@@ -272,9 +272,10 @@ export const portfolioData = {
       id: "cert-apollo-msa",
       title: "Master in Software Application",
       issuer: "Apollo Computer Education",
-      year: "2024",
+      year: "2025",
       badgeColor: "from-violet-600 to-purple-600",
-      category: "Software Fundamentals"
+      category: "Software Fundamentals",
+      imageUrl: "/certificates/apollo_msa.jpg"
     }
   ] as CertificationItem[],
 
