@@ -21,7 +21,7 @@ export const Certifications: React.FC = () => {
             Certifications & <span className="gradient-text">Achievements</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
-            Professional certifications completed across Oracle, NPTEL, CodeTantra, and Apollo.
+            Professional certifications completed across Oracle, NPTEL, and Apollo.
           </p>
         </div>
 
@@ -45,9 +45,9 @@ export const Certifications: React.FC = () => {
                   <span className="text-xs font-mono text-slate-400">{cert.year}</span>
                 </div>
 
-                {/* Title & Issuer */}
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-blue to-brand-purple p-[1px] shrink-0">
+                {/* Title & Issuer (Fixed min-height for uniform alignment across 1 and 2 line titles) */}
+                <div className="flex items-start gap-3 mb-3 min-h-[48px]">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-blue to-brand-purple p-[1px] shrink-0 mt-0.5">
                     <div className="w-full h-full bg-[#0B1120] rounded-[11px] flex items-center justify-center text-brand-cyan">
                       <ShieldCheck className="w-4.5 h-4.5" />
                     </div>
@@ -60,20 +60,20 @@ export const Certifications: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Official Certificate Image Preview */}
+                {/* Official Certificate Image Preview (Uniform aspect ratio & containment) */}
                 {cert.imageUrl && (
                   <div 
                     onClick={() => setSelectedImage({ title: cert.title, imageUrl: cert.imageUrl!, issuer: cert.issuer })}
-                    className="relative mt-3 rounded-2xl overflow-hidden border border-white/10 group/img cursor-pointer bg-slate-950/60"
+                    className="relative mt-3 rounded-2xl overflow-hidden border border-white/10 group/img cursor-pointer bg-[#0c1322] aspect-[16/10] flex items-center justify-center p-1.5"
                   >
                     <img
                       src={cert.imageUrl}
                       alt={cert.title}
-                      className="w-full h-40 object-cover object-top filter contrast-[1.02] group-hover/img:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain filter contrast-[1.02] group-hover/img:scale-[1.03] transition-transform duration-500 rounded-xl"
                     />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-1.5 text-xs text-white font-semibold backdrop-blur-[2px]">
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-1.5 text-xs text-white font-semibold backdrop-blur-[2px] rounded-2xl">
                       <ExternalLink className="w-4 h-4 text-brand-cyan" />
-                      <span>View Official Certificate</span>
+                      <span>View Full Certificate</span>
                     </div>
                   </div>
                 )}
