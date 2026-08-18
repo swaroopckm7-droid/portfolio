@@ -76,6 +76,7 @@ export interface CertificationItem {
   badgeColor: string;
   category: string;
   credentialUrl?: string;
+  imageUrl?: string;
 }
 
 export const portfolioData = {
@@ -226,17 +227,37 @@ export const portfolioData = {
       id: "cert-oracle-genai",
       title: "Oracle Generative AI Professional",
       issuer: "Oracle",
-      year: "2026",
+      year: "2025",
       badgeColor: "from-blue-500 to-indigo-600",
-      category: "Artificial Intelligence"
+      category: "Artificial Intelligence",
+      imageUrl: "/certificates/oracle_genai.png"
     },
     {
       id: "cert-oracle-apex",
       title: "Oracle APEX Cloud Developer",
       issuer: "Oracle",
-      year: "2026",
+      year: "2025",
       badgeColor: "from-purple-500 to-pink-600",
-      category: "Cloud & Web Apps"
+      category: "Cloud & Web Apps",
+      imageUrl: "/certificates/oracle_apex.png"
+    },
+    {
+      id: "cert-nptel-iiot",
+      title: "Industry 4.0 and IIoT (Elite)",
+      issuer: "NPTEL / IIT Kharagpur",
+      year: "2026",
+      badgeColor: "from-emerald-500 to-teal-600",
+      category: "Industrial IoT & Automation",
+      imageUrl: "/certificates/nptel_iiot.png"
+    },
+    {
+      id: "cert-nptel-softskills",
+      title: "Soft Skill Development",
+      issuer: "NPTEL / IIT Kharagpur",
+      year: "2025",
+      badgeColor: "from-amber-500 to-orange-600",
+      category: "Professional Communication",
+      imageUrl: "/certificates/nptel_soft_skills.png"
     },
     {
       id: "cert-oracle-agentic",
@@ -245,22 +266,6 @@ export const portfolioData = {
       year: "2026",
       badgeColor: "from-cyan-500 to-blue-600",
       category: "AI & Autonomous Systems"
-    },
-    {
-      id: "cert-nptel-iiot",
-      title: "Industry 4.0 and IIoT",
-      issuer: "NPTEL",
-      year: "2025",
-      badgeColor: "from-emerald-500 to-teal-600",
-      category: "Industrial IoT & Automation"
-    },
-    {
-      id: "cert-nptel-softskills",
-      title: "Soft Skill Development",
-      issuer: "NPTEL",
-      year: "2025",
-      badgeColor: "from-amber-500 to-orange-600",
-      category: "Professional Communication"
     },
     {
       id: "cert-codetantra-cpp",
