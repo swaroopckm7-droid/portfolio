@@ -6,11 +6,12 @@ import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Certifications } from './components/Certifications';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-brand-blue selection:text-white relative overflow-x-hidden">
-      {/* Dynamic Interactive Neural Network Canvas Background */}
+    <div className="min-h-screen bg-[#F8F9FA] text-slate-900 font-sans selection:bg-[#FACC15] selection:text-black relative overflow-x-hidden">
+      {/* Dynamic Background Canvas */}
       <ParticleBackground />
 
       {/* Main App Container */}
@@ -24,6 +25,7 @@ export function App() {
           <Projects />
           <Certifications />
         </main>
+        <Footer />
       </div>
     </div>
   );

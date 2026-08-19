@@ -16,23 +16,22 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative z-10 bg-slate-950 border-t border-white/10 pt-16 pb-12">
+    <footer className="relative z-10 bg-black text-white pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan flex items-center justify-center font-bold text-white text-sm">
-                S
-              </div>
-              <span className="font-bold text-xl text-white tracking-tight">
-                {personalInfo.shortName}
-                <span className="text-brand-cyan">.ai</span>
+              <span className="bg-[#FACC15] text-black font-extrabold px-3 py-1 rounded-md text-xs uppercase tracking-widest">
+                SWAROOP
+              </span>
+              <span className="font-extrabold text-xl text-white tracking-tight">
+                Portfolio
               </span>
             </div>
 
-            <p className="text-xs text-slate-400 leading-relaxed max-w-md">
+            <p className="text-xs text-slate-400 leading-relaxed max-w-md font-medium">
               B.Tech Artificial Intelligence & Machine Learning student at R.M.D Engineering College. Certified Oracle & NPTEL Specialist.
             </p>
 
@@ -41,7 +40,7 @@ export const Footer: React.FC = () => {
                 href={personalInfo.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-xl glass-panel text-slate-400 hover:text-white hover:border-brand-blue/50 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-900 text-white hover:bg-[#FACC15] hover:text-black border border-slate-800 transition-colors"
                 title="GitHub Profile"
               >
                 <GithubIcon className="w-4 h-4" />
@@ -49,7 +48,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="p-2 rounded-xl glass-panel text-slate-400 hover:text-white hover:border-brand-purple/50 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-900 text-white hover:bg-[#FACC15] hover:text-black border border-slate-800 transition-colors"
                 title="Send Email"
               >
                 <Mail className="w-4 h-4" />
@@ -57,7 +56,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="p-2 rounded-xl glass-panel text-slate-400 hover:text-white hover:border-brand-cyan/50 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-900 text-white hover:bg-[#FACC15] hover:text-black border border-slate-800 transition-colors"
                 title="Call Phone"
               >
                 <Phone className="w-4 h-4" />
@@ -67,14 +66,14 @@ export const Footer: React.FC = () => {
 
           {/* Quick Sitemap */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-xs font-mono text-slate-300 uppercase tracking-wider">Quick Sitemap</h4>
-            <div className="grid grid-cols-2 gap-2 text-xs text-slate-400">
-              <a href="#hero" className="hover:text-brand-cyan transition-colors">Hero</a>
-              <a href="#about" className="hover:text-brand-cyan transition-colors">About</a>
-              <a href="#skills" className="hover:text-brand-cyan transition-colors">Skills Matrix</a>
-              <a href="#experience" className="hover:text-brand-cyan transition-colors">Internships</a>
-              <a href="#projects" className="hover:text-brand-cyan transition-colors">Projects</a>
-              <a href="#certifications" className="hover:text-brand-cyan transition-colors">Certifications</a>
+            <h4 className="text-xs font-black text-[#FACC15] uppercase tracking-widest">Quick Sitemap</h4>
+            <div className="grid grid-cols-2 gap-2 text-xs font-bold text-slate-400">
+              <a href="#hero" className="hover:text-[#FACC15] transition-colors">Home</a>
+              <a href="#about" className="hover:text-[#FACC15] transition-colors">Education</a>
+              <a href="#skills" className="hover:text-[#FACC15] transition-colors">Skills</a>
+              <a href="#experience" className="hover:text-[#FACC15] transition-colors">Experience</a>
+              <a href="#projects" className="hover:text-[#FACC15] transition-colors">Projects</a>
+              <a href="#certifications" className="hover:text-[#FACC15] transition-colors">Certifications</a>
             </div>
           </div>
 
@@ -82,21 +81,21 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-3 flex md:justify-end items-start">
             <button
               onClick={scrollToTop}
-              className="px-4 py-3 rounded-2xl glass-panel border border-white/10 hover:border-brand-cyan/50 text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-2 group"
+              className="px-5 py-3 rounded-xl bg-[#FACC15] text-black font-extrabold text-xs uppercase tracking-wider hover:bg-white transition-all flex items-center gap-2 shadow-lg cursor-pointer"
             >
               <span>Back to Top</span>
-              <ArrowUp className="w-4 h-4 text-brand-cyan group-hover:-translate-y-1 transition-transform" />
+              <ArrowUp className="w-4 h-4 text-black" />
             </button>
           </div>
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-medium">
           <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            <span>Engineered with</span>
+          <p className="flex items-center gap-1.5">
+            <span>Built with</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-            <span>using React, Vite & Tailwind CSS</span>
+            <span>React, Vite & Tailwind CSS</span>
           </p>
         </div>
 

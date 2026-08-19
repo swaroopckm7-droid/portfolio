@@ -25,8 +25,8 @@ export const ParticleBackground: React.FC = () => {
     let height = (canvas.height = window.innerHeight);
 
     const particles: Particle[] = [];
-    const particleCount = Math.min(Math.floor(width / 18), 70);
-    const colors = ['#3B82F6', '#8B5CF6', '#06B6D4', '#60A5FA'];
+    const particleCount = Math.min(Math.floor(width / 22), 50);
+    const colors = ['#EAB308', '#CA8A04', '#64748B', '#FACC15'];
 
     let mouseX = width / 2;
     let mouseY = height / 2;
@@ -52,11 +52,11 @@ export const ParticleBackground: React.FC = () => {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
         radius: Math.random() * 2 + 1,
         color: colors[Math.floor(Math.random() * colors.length)],
-        alpha: Math.random() * 0.5 + 0.2,
+        alpha: Math.random() * 0.4 + 0.15,
       });
     }
 
@@ -89,12 +89,12 @@ export const ParticleBackground: React.FC = () => {
           const dy = p1.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 130) {
+          if (dist < 120) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = '#3B82F6';
-            ctx.globalAlpha = (1 - dist / 130) * 0.15;
+            ctx.strokeStyle = '#CBD5E1';
+            ctx.globalAlpha = (1 - dist / 120) * 0.12;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -104,12 +104,12 @@ export const ParticleBackground: React.FC = () => {
         const dxMouse = p1.x - mouseX;
         const dyMouse = p1.y - mouseY;
         const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-        if (distMouse < 160) {
+        if (distMouse < 150) {
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(mouseX, mouseY);
-          ctx.strokeStyle = '#06B6D4';
-          ctx.globalAlpha = (1 - distMouse / 160) * 0.25;
+          ctx.strokeStyle = '#EAB308';
+          ctx.globalAlpha = (1 - distMouse / 150) * 0.2;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -133,7 +133,7 @@ export const ParticleBackground: React.FC = () => {
       <div className="cursor-spotlight" />
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 pointer-events-none z-0 opacity-60"
+        className="fixed inset-0 pointer-events-none z-0 opacity-50"
       />
     </>
   );

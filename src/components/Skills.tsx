@@ -29,24 +29,24 @@ export const Skills: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const iconMap: Record<string, React.ReactNode> = {
-    Code2: <Code2 className="w-5 h-5 text-brand-blue" />,
-    Cpu: <Cpu className="w-5 h-5 text-brand-purple" />,
-    Terminal: <Terminal className="w-5 h-5 text-brand-cyan" />,
-    Binary: <Binary className="w-5 h-5 text-emerald-400" />,
-    Sparkles: <Sparkles className="w-5 h-5 text-amber-400" />,
-    Bot: <Bot className="w-5 h-5 text-brand-cyan" />,
-    BrainCircuit: <BrainCircuit className="w-5 h-5 text-brand-purple" />,
-    Cloud: <Cloud className="w-5 h-5 text-brand-blue" />,
-    MessageSquareCode: <MessageSquareCode className="w-5 h-5 text-pink-400" />,
-    Filter: <Filter className="w-5 h-5 text-indigo-400" />,
-    Boxes: <Boxes className="w-5 h-5 text-brand-cyan" />,
-    Layers: <Layers className="w-5 h-5 text-brand-purple" />,
-    Lightbulb: <Lightbulb className="w-5 h-5 text-yellow-400" />,
-    BarChart3: <BarChart3 className="w-5 h-5 text-emerald-400" />,
-    Laptop: <Laptop className="w-5 h-5 text-brand-blue" />,
-    GitBranch: <GitBranch className="w-5 h-5 text-rose-400" />,
-    Network: <Network className="w-5 h-5 text-cyan-400" />,
-    Table: <Table className="w-5 h-5 text-teal-400" />,
+    Code2: <Code2 className="w-5 h-5 text-black" />,
+    Cpu: <Cpu className="w-5 h-5 text-black" />,
+    Terminal: <Terminal className="w-5 h-5 text-black" />,
+    Binary: <Binary className="w-5 h-5 text-black" />,
+    Sparkles: <Sparkles className="w-5 h-5 text-black" />,
+    Bot: <Bot className="w-5 h-5 text-black" />,
+    BrainCircuit: <BrainCircuit className="w-5 h-5 text-black" />,
+    Cloud: <Cloud className="w-5 h-5 text-black" />,
+    MessageSquareCode: <MessageSquareCode className="w-5 h-5 text-black" />,
+    Filter: <Filter className="w-5 h-5 text-black" />,
+    Boxes: <Boxes className="w-5 h-5 text-black" />,
+    Layers: <Layers className="w-5 h-5 text-black" />,
+    Lightbulb: <Lightbulb className="w-5 h-5 text-black" />,
+    BarChart3: <BarChart3 className="w-5 h-5 text-black" />,
+    Laptop: <Laptop className="w-5 h-5 text-black" />,
+    GitBranch: <GitBranch className="w-5 h-5 text-black" />,
+    Network: <Network className="w-5 h-5 text-black" />,
+    Table: <Table className="w-5 h-5 text-black" />,
   };
 
   const categories = ['All', ...skillCategories.map((c) => c.category)];
@@ -63,19 +63,19 @@ export const Skills: React.FC = () => {
     .filter((cat) => cat.skills.length > 0);
 
   return (
-    <section id="skills" className="py-24 relative z-10 bg-slate-950/40 border-y border-white/5">
+    <section id="skills" className="py-24 relative z-10 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold glass-panel text-brand-purple border border-brand-purple/30">
-            <Cpu className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-black bg-black text-white uppercase tracking-widest shadow-sm">
+            <Cpu className="w-4 h-4 text-[#FACC15]" />
             <span>SKILLS & TECHNOLOGIES</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Technical <span className="gradient-text">Skills</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight uppercase">
+            Technical <span className="bg-[#FACC15] text-black px-2 py-0.5 inline-block">Skills</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
             Core programming languages, development tools, and data analytics libraries I work with.
           </p>
         </div>
@@ -87,10 +87,10 @@ export const Skills: React.FC = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all ${
                   activeCategory === cat
-                    ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-neon-blue'
-                    : 'glass-panel text-slate-400 hover:text-white hover:bg-white/5'
+                    ? 'bg-[#FACC15] text-black shadow-md border-2 border-black'
+                    : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 font-bold'
                 }`}
               >
                 {cat}
@@ -99,13 +99,13 @@ export const Skills: React.FC = () => {
           </div>
 
           <div className="relative w-full md:w-64">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search skills (e.g. Python, Git)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl glass-panel text-xs text-white placeholder-slate-500 border border-white/10 focus:outline-none focus:border-brand-blue/60 transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-xl bg-white text-xs font-bold text-black placeholder-slate-400 border-2 border-slate-200 focus:outline-none focus:border-black transition-colors shadow-sm"
             />
           </div>
         </div>
@@ -121,28 +121,28 @@ export const Skills: React.FC = () => {
               transition={{ duration: 0.5, delay: catIdx * 0.1 }}
               className="space-y-4"
             >
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div className="flex items-center justify-between border-b-2 border-slate-200 pb-3">
                 <div>
-                  <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-brand-cyan" />
+                  <h3 className="text-xl font-extrabold text-black uppercase flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#FACC15]" />
                     <span>{catGroup.category}</span>
                   </h3>
-                  <p className="text-xs text-slate-400 mt-0.5">{catGroup.description}</p>
+                  <p className="text-xs text-slate-500 font-medium mt-0.5">{catGroup.description}</p>
                 </div>
-                <span className="text-xs font-mono text-slate-500">{catGroup.skills.length} skills</span>
+                <span className="text-xs font-mono font-bold text-slate-600 bg-slate-200 px-2.5 py-1 rounded-md">{catGroup.skills.length} skills</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {catGroup.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="glass-panel px-5 py-4 rounded-2xl border border-white/10 hover:border-brand-blue/40 transition-all hover:-translate-y-1 group relative flex items-center gap-3.5"
+                    className="editorial-card px-5 py-4 rounded-2xl border-2 border-slate-200 hover:border-black transition-all flex items-center gap-3.5"
                   >
-                    <div className="p-2.5 rounded-xl bg-white/5 group-hover:bg-brand-blue/20 transition-colors shrink-0">
-                      {iconMap[skill.icon] || <Code2 className="w-5 h-5 text-brand-blue" />}
+                    <div className="p-2.5 rounded-xl bg-[#FACC15] shrink-0 shadow-sm">
+                      {iconMap[skill.icon] || <Code2 className="w-5 h-5 text-black" />}
                     </div>
 
-                    <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-brand-cyan transition-colors leading-snug">
+                    <h4 className="text-xs sm:text-sm font-extrabold text-black leading-snug">
                       {skill.name}
                     </h4>
                   </div>

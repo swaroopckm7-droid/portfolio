@@ -21,89 +21,95 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[88vh] pt-28 pb-16 flex items-center justify-center overflow-hidden z-10"
+      className="relative min-h-[92vh] pt-28 pb-16 flex items-center justify-center overflow-hidden z-10 bg-[#F8F9FA]"
     >
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-brand-blue/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-brand-purple/20 rounded-full blur-[120px] pointer-events-none" />
+      {/* Top Banner Accent (Yellow Editorial Concept) */}
+      <div className="absolute top-0 inset-x-0 h-44 bg-[#FACC15] -skew-y-1 origin-top-left -z-0 opacity-95" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Text Column */}
+          {/* Left Editorial Text Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            {/* Greeting Badge */}
+            {/* Status & Name Strip Badge */}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold glass-panel text-brand-cyan border border-brand-cyan/30">
-                <Sparkles className="w-3.5 h-3.5 text-brand-cyan" />
-                <span>AI & Machine Learning Engineer</span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-black bg-black text-white uppercase tracking-widest shadow-md">
+                <Sparkles className="w-3.5 h-3.5 text-[#FACC15]" />
+                <span>{personalInfo.name}</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-extrabold bg-[#FACC15] text-black border border-black/10">
+                AI & Machine Learning Specialist
               </span>
             </div>
 
-            {/* Headline */}
-            <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-                Hi, I'm <br />
-                <span className="gradient-text">C Santhi Swaroop</span>
+            {/* Giant Graphic Editorial Headline */}
+            <div className="space-y-2">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight leading-[1.08] uppercase">
+                AI & MACHINE <br />
+                <span className="bg-[#FACC15] text-black px-2 py-0.5 inline-block my-1 shadow-sm">
+                  LEARNING
+                </span> <br />
+                PORTFOLIO
               </h1>
             </div>
 
-            {/* Human Bio Summary */}
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-              B.Tech AIML student at R.M.D Engineering College with hands-on internship experience in Data Analytics and Python development. I build practical Machine Learning models, Generative AI pipelines, and clean data visualizations.
+            {/* Bio Summary */}
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed max-w-2xl font-medium border-l-4 border-black pl-4">
+              B.Tech AIML student at R.M.D Engineering College with hands-on experience building Machine Learning models, Python data pipelines, and Generative AI solutions.
             </p>
 
-            {/* Action CTA Button */}
+            {/* Action CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#projects"
-                className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan text-white font-semibold text-sm shadow-neon-blue hover:scale-105 hover:shadow-neon-purple transition-all flex items-center gap-2 group"
+                className="px-8 py-4 rounded-xl bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#FACC15] hover:text-black shadow-lg transition-all flex items-center gap-2 group border-2 border-black"
               >
-                <span>View My Projects</span>
+                <span>View Selected Works</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
             {/* Contact Details Badges */}
-            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-slate-400">
+            <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-3 text-xs text-slate-700">
               <a
                 href={personalInfo.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg glass-panel hover:text-white hover:border-brand-blue/40 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold hover:border-black transition-colors shadow-sm"
               >
-                <GithubIcon className="w-3.5 h-3.5 text-brand-blue" />
+                <GithubIcon className="w-4 h-4 text-black" />
                 <span>{personalInfo.github}</span>
               </a>
 
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg glass-panel hover:text-white hover:border-brand-purple/40 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold hover:border-black transition-colors shadow-sm"
               >
-                <Mail className="w-3.5 h-3.5 text-brand-purple" />
+                <Mail className="w-4 h-4 text-amber-600" />
                 <span>{personalInfo.email}</span>
               </a>
 
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg glass-panel hover:text-white hover:border-brand-cyan/40 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold hover:border-black transition-colors shadow-sm"
               >
-                <Phone className="w-3.5 h-3.5 text-brand-cyan" />
+                <Phone className="w-4 h-4 text-blue-600" />
                 <span>+91 {personalInfo.phone}</span>
               </a>
 
-              <span className="flex items-center gap-1 text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-rose-400" />
+              <span className="flex items-center gap-1 text-slate-600 font-semibold">
+                <MapPin className="w-4 h-4 text-rose-500" />
                 <span>{personalInfo.location}</span>
               </span>
             </div>
           </motion.div>
 
-          {/* Right Column: Clean Portrait Photo Card */}
+          {/* Right Column: Editorial Portrait Card with Yellow Frame */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -111,15 +117,20 @@ export const Hero: React.FC = () => {
             className="lg:col-span-5 flex justify-center relative"
           >
             <div className="relative w-72 sm:w-80 group">
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan opacity-75 blur-xl group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
+              {/* Yellow Accent Backplate */}
+              <div className="absolute -inset-2 rounded-3xl bg-[#FACC15] shadow-xl group-hover:rotate-1 transition-transform duration-500" />
 
-              <div className="relative glass-panel rounded-3xl p-3 border border-white/20 overflow-hidden shadow-2xl">
-                <div className="relative h-[420px] w-full rounded-2xl overflow-hidden bg-slate-950">
+              <div className="relative bg-white rounded-3xl p-3 border-2 border-black overflow-hidden shadow-2xl">
+                <div className="relative h-[410px] w-full rounded-2xl overflow-hidden bg-slate-900">
                   <img
                     src={personalInfo.photoUrl}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover object-top filter contrast-[1.05] group-hover:scale-105 transition-transform duration-700"
                   />
+                  <div className="absolute bottom-3 left-3 right-3 bg-black/90 backdrop-blur-md text-white p-3 rounded-xl border border-white/20">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-[#FACC15] block">Student Developer</span>
+                    <span className="text-xs font-bold">{personalInfo.name}</span>
+                  </div>
                 </div>
               </div>
             </div>

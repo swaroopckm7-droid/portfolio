@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import {
   FolderGit2,
   Zap,
-  CheckCircle2,
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
@@ -17,19 +16,19 @@ export const Projects: React.FC = () => {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="py-24 relative z-10 bg-slate-950/30">
+    <section id="projects" className="py-24 relative z-10 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold glass-panel text-brand-cyan border border-brand-cyan/30">
-            <FolderGit2 className="w-3.5 h-3.5" />
-            <span>FEATURED PROJECT</span>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-black bg-black text-white uppercase tracking-widest shadow-sm">
+            <FolderGit2 className="w-4 h-4 text-[#FACC15]" />
+            <span>SELECTED WORKS</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Featured <span className="gradient-text">Project</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight uppercase">
+            Featured <span className="bg-[#FACC15] text-black px-2 py-0.5 inline-block">Project</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
             Python-based data analytics pipeline integrating data cleaning, interactive visualization, and trend prediction.
           </p>
         </div>
@@ -43,50 +42,54 @@ export const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 hover:border-brand-cyan/40 transition-all hover:-translate-y-1 group relative flex flex-col justify-between"
+              className="editorial-card p-6 sm:p-8 rounded-3xl border-2 border-slate-900/10 relative flex flex-col justify-between"
             >
+              <div className="absolute top-0 left-0 right-0 h-2 bg-[#FACC15]" />
+
               <div>
-                <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30">
+                <div className="flex items-center justify-between gap-2 mb-4 mt-2">
+                  <span className="px-3 py-1 rounded-md text-xs font-extrabold bg-[#FACC15] text-black uppercase">
                     {project.category}
                   </span>
-                  <span className="text-xs font-mono text-slate-400">{project.year}</span>
+                  <span className="text-xs font-bold text-slate-800 bg-slate-100 px-3 py-1 rounded-md border border-slate-200">{project.year}</span>
                 </div>
 
-                <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-brand-cyan transition-colors">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h3 className="text-2xl sm:text-3xl font-black text-black leading-tight">
                     {project.title}
                   </h3>
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl glass-panel text-slate-300 hover:text-white hover:border-brand-blue/50 transition-colors shrink-0 flex items-center gap-1.5 text-xs font-semibold"
+                    className="px-4 py-2 rounded-xl bg-black text-white hover:bg-[#FACC15] hover:text-black font-extrabold transition-all shrink-0 flex items-center gap-1.5 text-xs uppercase shadow-md"
                     title="View GitHub Repository"
                   >
                     <GithubIcon className="w-4 h-4" />
-                    <span className="hidden sm:inline">GitHub</span>
+                    <span>GitHub</span>
                   </a>
                 </div>
 
-                <p className="text-xs font-semibold text-brand-purple mb-4">{project.subtitle}</p>
+                <p className="text-xs font-bold text-amber-600 mb-4 uppercase tracking-wider">{project.subtitle}</p>
 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-medium">
                   {project.description}
                 </p>
 
-                <div className="p-3.5 rounded-2xl bg-gradient-to-r from-brand-blue/15 to-brand-cyan/15 border border-brand-cyan/30 flex items-center justify-between mb-6">
+                <div className="p-4 rounded-2xl bg-[#FACC15] border-2 border-black flex items-center justify-between mb-6 shadow-sm">
                   <div className="flex items-center gap-2.5">
-                    <Zap className="w-4 h-4 text-brand-cyan animate-pulse" />
-                    <span className="text-xs font-bold text-white">{project.metrics}</span>
+                    <Zap className="w-4 h-4 text-black font-bold" />
+                    <span className="text-xs font-black text-black uppercase">{project.metrics}</span>
                   </div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase">Impact Metric</span>
+                  <span className="text-[10px] font-black text-black uppercase tracking-widest bg-white/60 px-2 py-0.5 rounded">Impact Metric</span>
                 </div>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2.5 mb-6">
                   {project.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2.5 text-xs text-slate-800 font-medium">
+                      <div className="w-4 h-4 rounded-full bg-black text-[#FACC15] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">
+                        ✓
+                      </div>
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -94,11 +97,11 @@ export const Projects: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-200">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-0.5 rounded-md text-[11px] font-mono bg-white/5 text-slate-300 border border-white/10"
+                      className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-100 text-slate-900 border border-slate-200"
                     >
                       {tech}
                     </span>
