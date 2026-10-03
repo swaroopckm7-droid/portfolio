@@ -80,15 +80,15 @@ export const Certifications: React.FC = () => {
           ))}
         </div>
 
-        {/* Achievements Section */}
+        {/* Technical Achievements Section */}
         <div className="editorial-card p-8 sm:p-10 rounded-3xl border-2 border-slate-900/10 bg-slate-50 relative overflow-hidden">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-2xl bg-[#FACC15] text-black flex items-center justify-center font-black shadow-md border-2 border-black">
               <Trophy className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-2xl font-black text-black uppercase">Extracurriculars & Coding Practice</h3>
-              <p className="text-xs text-slate-600 font-medium">Coding practice, platform problem-solving, and continuous learning</p>
+              <h3 className="text-2xl font-black text-black uppercase">Technical Achievements</h3>
+              <p className="text-xs text-slate-600 font-medium">Coding competitions won, platform problem-solving, and continuous learning</p>
             </div>
           </div>
 
@@ -96,12 +96,20 @@ export const Certifications: React.FC = () => {
             {achievements.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-4 rounded-2xl border border-slate-200 flex items-start gap-3 shadow-sm"
+                className={`p-4 rounded-2xl border flex items-start gap-3 shadow-sm transition-all ${
+                  idx === 0
+                    ? 'bg-[#FACC15]/20 border-black border-2 font-extrabold text-black md:col-span-2'
+                    : 'bg-white border-slate-200 text-slate-800 font-medium'
+                }`}
               >
-                <div className="w-4 h-4 rounded-full bg-black text-[#FACC15] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">
-                  ✓
+                <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs ${
+                  idx === 0 ? 'bg-black text-[#FACC15]' : 'bg-black text-[#FACC15]'
+                }`}>
+                  {idx === 0 ? '🏆' : '✓'}
                 </div>
-                <p className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed">{item}</p>
+                <p className={`text-xs sm:text-sm leading-relaxed ${idx === 0 ? 'font-black text-black text-sm sm:text-base' : 'font-medium text-slate-800'}`}>
+                  {item}
+                </p>
               </div>
             ))}
           </div>

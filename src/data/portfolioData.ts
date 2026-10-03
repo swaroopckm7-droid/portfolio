@@ -279,6 +279,7 @@ export const portfolioData = {
   ] as CertificationItem[],
 
   achievements: [
+    "🏆 Won 1st Prize in Technical Q&A & Coding Competition (focused on Data Structures & Algorithms / DSA) conducted by Saveetha Institute of Medical and Technical Sciences (SIMATS).",
     "Completed multiple professional certifications in AI, Cloud, and Programming from Oracle and NPTEL.",
     "Active learner and contributor in AI/ML and software development communities.",
     "Participated in coding practice and problem-solving on platforms including Skillrack.",
