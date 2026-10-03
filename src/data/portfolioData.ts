@@ -160,7 +160,6 @@ export const portfolioData = {
       skills: [
         { name: "VS Code", level: 95, icon: "Laptop", experience: "Daily IDE" },
         { name: "Git & GitHub", level: 88, icon: "GitBranch", experience: "Version Control" },
-        { name: "REST APIs", level: 82, icon: "Network", experience: "Data Integration" },
         { name: "Data Analytics Libraries (Pandas/NumPy)", level: 90, icon: "Table", experience: "EDA & Modeling" }
       ]
     }
