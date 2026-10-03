@@ -36,25 +36,21 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            {/* Status & Name Strip Badge */}
+            {/* Single Clean Name Badge */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-black bg-black text-white uppercase tracking-widest shadow-md">
                 <Sparkles className="w-3.5 h-3.5 text-[#FACC15]" />
-                <span>{personalInfo.name}</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-extrabold bg-[#FACC15] text-black border border-black/10">
-                AI & Machine Learning Specialist
+                <span>C SANTHI SWAROOP</span>
               </span>
             </div>
 
-            {/* Giant Graphic Editorial Headline */}
+            {/* Giant Graphic Editorial Headline with Name */}
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight leading-[1.08] uppercase">
-                AI & MACHINE <br />
+                C SANTHI <br />
                 <span className="bg-[#FACC15] text-black px-2 py-0.5 inline-block my-1 shadow-sm">
-                  LEARNING
-                </span> <br />
-                PORTFOLIO
+                  SWAROOP
+                </span>
               </h1>
             </div>
 
