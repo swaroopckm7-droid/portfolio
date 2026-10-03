@@ -114,10 +114,6 @@ export const Hero: React.FC = () => {
                     alt={personalInfo.name}
                     className="w-full h-full object-cover object-top filter contrast-[1.05] group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-3 left-3 right-3 bg-black/90 backdrop-blur-md text-white p-3 rounded-xl border border-white/20">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-[#FACC15] block">Student Developer</span>
-                    <span className="text-xs font-bold">{personalInfo.name}</span>
-                  </div>
                 </div>
               </div>
             </div>
