@@ -5,7 +5,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Sparkles,
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
@@ -36,14 +35,6 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            {/* Single Clean Name Badge */}
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-black bg-black text-white uppercase tracking-widest shadow-md">
-                <Sparkles className="w-3.5 h-3.5 text-[#FACC15]" />
-                <span>C SANTHI SWAROOP</span>
-              </span>
-            </div>
-
             {/* Giant Graphic Editorial Headline with Name */}
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight leading-[1.08] uppercase">
@@ -116,7 +107,7 @@ export const Hero: React.FC = () => {
               {/* Yellow Accent Backplate */}
               <div className="absolute -inset-2 rounded-3xl bg-[#FACC15] shadow-xl group-hover:rotate-1 transition-transform duration-500" />
 
-              <div className="relative bg-white rounded-3xl p-3 border-2 border-black overflow-hidden shadow-2xl">
+              <div className="relative bg-[#F8F9FA] rounded-3xl p-3 border-2 border-black overflow-hidden shadow-2xl">
                 <div className="relative h-[410px] w-full rounded-2xl overflow-hidden bg-slate-900">
                   <img
                     src={personalInfo.photoUrl}
